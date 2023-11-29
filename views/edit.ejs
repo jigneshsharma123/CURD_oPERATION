@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<h1> Edit the user info :</h1>
+<form action="/update_user/<%= User._id %>" method="POST">
+    <label for="firstName">FirstName</label>
+    <input type="text" id="firstName" placeholder="First Name" name="firstName" value="<%= User.firstName %>"/>
+    <label for="lastName">LastName</label>
+    <input type="text" placeholder="Last Name" id="lastName" name="lastName" value="<%= User.lastName %>"/>
+    <label for="MobNumber">Mobile_no:</label>
+    <input type="number" placeholder="Mob_number" id="MobNumber" name="mobile" value="<%= User.mobile %>"/>
+     <label for="email">Email:</label>
+    <input type="text" placeholder="Email" id="email" name="email" value="<%= User.email %>"/>
+   <label for="pw">Password</label>
+  <input type="password" placeholder="type Password" id="pw" name="password" value="****"/>
+  <input type="submit" value="update">
+</form>
+<body>
+</html>
